@@ -15,4 +15,12 @@ button.addEventListener('click', (event) => {
     return;
   }
 
+  if (usernameValue !== 'alex' || passwordValue !== '123') {
+    event.preventDefault();
+    alert('Incorrect username or password!');
+    return;
+  }
+
+  alert('Access granted!');
+
 });
