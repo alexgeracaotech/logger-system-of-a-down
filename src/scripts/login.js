@@ -5,22 +5,39 @@ const checkbox = document.querySelector('#checkbox-login');
 const button = document.querySelector('#button-login');
 
 button.addEventListener('click', (event) => {
+  event.preventDefault();
 
   const usernameValue = username.value;
   const passwordValue = password.value;
 
   if (usernameValue === '' || passwordValue === '') {
-    event.preventDefault();
     alert('Please fill in all the fields!');
     return;
   }
 
-  if (usernameValue !== 'alex' || passwordValue !== '123') {
-    event.preventDefault();
+  const usernameSession = sessionStorage.getItem('username');
+  const passwordSession = sessionStorage.getItem('password');
+
+  if (usernameValue !== usernameSession || passwordValue !== passwordSession) {
     alert('Incorrect username or password!');
     return;
   }
 
   alert('Access granted!');
 
+  window.location.href = './home.html';
+
+});
+
+checkbox.addEventListener('change', () => {
+
+  const type = password.getAttribute('type');
+
+  if (type !== 'password') {
+    password.setAttribute('type', 'password');
+    return;
+  }
+  
+  password.setAttribute('type', 'text');
+  
 });
