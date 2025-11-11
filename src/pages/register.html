@@ -15,36 +15,41 @@
       rel="stylesheet"
       href="../styles/form.css"
     />
-    <title>Login - Logger System</title>
+    <title>Register - Logger System</title>
   </head>
   <body>
     <form>
-      <h1>login</h1>
+      <h1>register</h1>
       <div class="inputs">
         <input
-          id="username-login"
+          id="name-register"
+          type="text"
+          placeholder="name"
+        />
+        <input
+          id="username-register"
           type="text"
           placeholder="username"
         />
         <input
-          id="password-login"
+          id="password-register"
           type="password"
           placeholder="password"
         />
       </div>
       <div class="show">
         <input
-          id="checkbox-login"
+          id="checkbox-register"
           type="checkbox"
         />
-        <label for="checkbox-login">show password</label>
+        <label for="checkbox-register">show password</label>
       </div>
-      <button id="button-login">login</button>
+      <button id="button-register">register</button>
       <div class="recovery">
         <small>forgot your password? recover it <a href="#">here</a>.</small>
         <small>don't have an account? register <a href="#">here</a>.</small>
       </div>
     </form>
-    <script src="../scripts/login.js"></script>
+    <script src="../scripts/register.js"></script>
   </body>
 </html>
